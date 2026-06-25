@@ -1,0 +1,53 @@
+# ── Dependencies ──
+node_modules/
+.pnp
+.pnp.js
+
+# ── Environment variables ──
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# ── Next.js build output ──
+.next/
+out/
+
+# ── Vercel deployment ──
+.vercel/
+
+# ── Build artifacts ──
+dist/
+build/
+
+# ── IDE and editor files ──
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ── OS files ──
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── TypeScript cache ──
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Coverage / test reports ──
+coverage/
+reports/
+
+# ── Logs ──
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# ── Misc ──
+*.pem
+cypress/videos/
+cypress/screenshots/

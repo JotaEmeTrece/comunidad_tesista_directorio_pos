@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ── Brand Tokens — Manual de Identidad Visual CTL ── */
+@theme {
+  --color-yellow: #FFDE21;
+  --color-yellow-dark: #E6C81E;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #898989;
+  --color-gray-light: #D3D3D3;
+  --color-gray-bg: #1C2028;
+  --color-gray-mid: #D3D3D3;
+  --color-gray-text: #898989;
+
+  --font-sans: var(--font-roboto-condensed), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.10);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  --transition-base: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Global resets ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--color-gray-bg);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Badge colors por país ── */
+@utility badge-pais {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-sm text-[11px] font-bold uppercase tracking-wide;
+}
+
+/* ── Keyframes ── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up-card {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
