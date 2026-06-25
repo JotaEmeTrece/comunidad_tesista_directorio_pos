@@ -4,6 +4,7 @@
 
 import type { Programa } from "@/types";
 import { badgeClass, fmtUSD } from "@/lib/utils";
+import Link from "next/link";
 
 interface CardProps {
   programa: Programa;
@@ -135,17 +136,13 @@ export function Card({ programa, index }: CardProps) {
           Contactar Asesor
         </button>
 
-        {/* Botón Ver Programa (solo si tiene URL) */}
-        {programa.url && (
-          <a
-            href={programa.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-sm font-semibold no-underline rounded-[4px] px-3.5 py-2 flex items-center justify-center gap-1.5 cursor-pointer w-full transition-all text-black bg-yellow border-2 border-yellow hover:bg-yellow-dark hover:border-yellow-dark"
-          >
-            Ver Programa
-          </a>
-        )}
+        {/* Botón "Ver Programa" — navega a la ruta dinámica /programas/[slug] */}
+        <Link
+          href={`/programas/${programa.slug}`}
+          className="font-sans text-sm font-semibold no-underline rounded-[4px] px-3.5 py-2 flex items-center justify-center gap-1.5 cursor-pointer w-full transition-all text-black bg-yellow border-2 border-yellow hover:bg-yellow-dark hover:border-yellow-dark"
+        >
+          Ver Programa
+        </Link>
       </div>
     </article>
   );

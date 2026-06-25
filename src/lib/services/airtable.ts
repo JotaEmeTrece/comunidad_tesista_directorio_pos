@@ -28,6 +28,30 @@ const FIELD_MAP: Record<string, keyof Programa> = {
   "URL del Programa": "url",
 };
 
+/**
+ * Genera un slug único combinando nombre del programa + universidad + últimos 4 chars del ID nativo de Airtable.
+ * Limpia: minúsculas, sin acentos, sin caracteres especiales, espacios → guiones (kebab-case).
+ */
+function generarSlug(nombre: string, universidad: string, airtableId: string): string {
+  const ultimos4 = airtableId.slice(-4);
+  const raw = `${nombre} ${universidad} ${ultimos4}`;
+
+  // Normalizar: descomponer caracteres acentuados y eliminar diacríticos
+  const sinAcentos = raw
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  const slug = sinAcentos
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")   // Eliminar caracteres no alfanuméricos (excepto espacios y guiones)
+    .replace(/\s+/g, "-")            // Espacios → guiones
+    .replace(/-+/g, "-")             // Colapsar múltiples guiones
+    .replace(/^-+|-+$/g, "");        // Recortar guiones al inicio y final
+
+  return slug;
+}
+
 function mapRecord(record: AirtableRecord): Programa {
   const raw = record.fields;
   const item: Record<string, unknown> = {};
@@ -42,6 +66,11 @@ function mapRecord(record: AirtableRecord): Programa {
 
   item.matricula = Number(item.matricula) || 0;
   item.duracion = String(item.duracion ?? "");
+
+  // Generar slug: nombre del programa + universidad + últimos 4 chars del ID
+  const nombre = String(item.nombre ?? "");
+  const universidad = String(item.universidad ?? "");
+  item.slug = generarSlug(nombre, universidad, record.id);
 
   return item as unknown as Programa;
 }

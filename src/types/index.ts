@@ -20,4 +20,6 @@ export interface Programa {
   /** URL de la imagen del programa (opcional, usa fallback si no existe) */
   imagen: string;
   url: string;
+  /** Slug único generado: nombre-universidad-ultimos4charsAirtableId (kebab-case) */
+  slug: string;
 }
