@@ -38,6 +38,7 @@ Redacta un análisis profesional, cálido y motivador en español que siga de fo
 - Cierre comercial sutil: Concluye tu texto recordando que el verdadero reto de estos posgrados es la investigación de grado, y que Comunidad Tesista cuenta con planes especiales para asegurar la redacción de su tesis por un costo preferencial ($3.450.000 COP para Maestrías y $6.000.000 COP para Doctorados) para que puedan estudiar sin preocupaciones.
 
 3. Formato y Extensión:
+- Usa negritas de Markdown (**texto**) de forma selectiva para resaltar conceptos clave en cada párrafo (como las universidades, palabras como 'beca completa' o 'convenio pro bono', y los precios de las tesis). Esto romperá la densidad visual y facilitará el escaneo rápido sin perder profundidad.
 - Usa saltos de línea dobles entre párrafos para que la lectura sea sumamente limpia.
 - Mantén el texto directo, ejecutivo y con un límite máximo de 350 palabras.`;
 
