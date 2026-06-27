@@ -242,7 +242,7 @@ export default function CatalogoClient({ inicialProgramas, serverError }: Catalo
                 </button>
             </div>
 
-            <main className="max-w-[1100px] mx-auto px-10 py-[52px_40px_80px] max-sm:px-5 max-sm:py-9">
+            <main id="catalogo" className="max-w-[1100px] mx-auto px-10 py-[52px_40px_80px] max-sm:px-5 max-sm:py-9">
                 {/* ── Filtros superiores ── */}
                 <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
                     <div className="flex flex-wrap items-center gap-3 mt-8">

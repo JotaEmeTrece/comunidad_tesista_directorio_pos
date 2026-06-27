@@ -30,28 +30,23 @@ export function Header() {
           }`}
       >
         <a
-          href="#"
+          href="#catalogo"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false);
+          }}
           className="font-sans font-medium text-[15px] tracking-[-0.2px] no-underline text-yellow px-3.5 py-2 rounded-sm transition-colors hover:bg-yellow hover:text-black leading-tight"
         >
           Programas
         </a>
         <a
-          href="#"
+          href="https://comunidadtesistadelatinoamerica.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-sans font-medium text-[15px] tracking-[-0.2px] no-underline text-yellow px-3.5 py-2 rounded-sm transition-colors hover:bg-yellow hover:text-black leading-tight"
         >
-          Países
-        </a>
-        <a
-          href="#"
-          className="font-sans font-medium text-[15px] tracking-[-0.2px] no-underline text-yellow px-3.5 py-2 rounded-sm transition-colors hover:bg-yellow hover:text-black leading-tight"
-        >
-          Becas
-        </a>
-        <a
-          href="#"
-          className="font-sans font-medium text-[15px] tracking-[-0.2px] no-underline text-yellow px-3.5 py-2 rounded-sm transition-colors hover:bg-yellow hover:text-black leading-tight"
-        >
-          Blog
+          CTL
         </a>
       </nav>
     </header>
