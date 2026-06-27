@@ -160,20 +160,20 @@ export default async function ProgramaDetallePage({ params }: Props) {
                                 <p className="text-sm text-white/50 mt-1">{programa.pais}</p>
                             </div>
 
-                            {/* ── Checkbox de tesis + Contactar Asesor ── */}
-                            <TesistaActions programa={programa} variant="detalle" />
-
                             {/* Botón de acción externa */}
                             {programa.url && (
                                 <a
                                     href={programa.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block w-full text-center font-sans text-sm font-bold tracking-[0.5px] uppercase bg-yellow text-black border-2 border-yellow rounded-md px-8 py-4 cursor-pointer transition-colors hover:bg-yellow-dark hover:border-yellow-dark no-underline"
+                                    className="block w-full text-center font-sans text-sm font-bold tracking-[0.5px] uppercase bg-yellow text-black border-2 border-yellow rounded-full px-8 py-4 cursor-pointer transition-colors hover:bg-yellow-dark hover:border-yellow-dark no-underline"
                                 >
                                     Ver Programa Oficial
                                 </a>
                             )}
+
+                            {/* ── Checkbox de tesis + Cotizar tesis con CTL ── */}
+                            <TesistaActions programa={programa} variant="detalle" />
                         </div>
 
                         {/* Columna derecha: Análisis del país */}

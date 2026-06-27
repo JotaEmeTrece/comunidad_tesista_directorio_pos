@@ -12,7 +12,7 @@ export function Hero({ onSearch }: HeroProps) {
     <section className="bg-black text-white px-10 py-[72px_40px_60px] max-sm:px-5 max-sm:py-12 relative overflow-hidden">
       {/* Círculo decorativo de fondo */}
       <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-yellow rounded-full opacity-[0.07] pointer-events-none" />
-      scm-history-item:c%3A%5CUsers%5Cmapog%5CDocuments%5CPages%5Ccomunidad_tesista_posgrados?%7B%22repositoryId%22%3A%22scm0%22%2C%22historyItemId%22%3A%2272f5cb832a6aa8a0156bd58b7ddb25715d6bc40a%22%2C%22historyItemParentId%22%3A%2251212fc282502b2c4d349f2f7992460378ee82e9%22%2C%22historyItemDisplayId%22%3A%2272f5cb8%22%7D
+
       <div className="max-w-[1100px] mx-auto">
         {/* Badge superior */}
         <span className="inline-block bg-yellow text-black text-[11px] font-bold tracking-[2px] uppercase px-3 py-1 rounded-sm mb-5">
