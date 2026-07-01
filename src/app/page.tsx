@@ -1,4 +1,4 @@
-import { fetchProgramas } from "@/lib/services/airtable";
+import { fetchProgramas } from "@/lib/services/supabase";
 import CatalogoClient from "@/components/CatalogoClient";
 import type { Programa } from "@/types";
 
@@ -14,8 +14,8 @@ export default async function HomePage() {
     } catch (err) {
         error =
             err instanceof Error
-                ? err.message === "AIRTABLE_NOT_CONFIGURED"
-                    ? "Airtable no está configurado. Verifica AIRTABLE_API_KEY y AIRTABLE_BASE_ID."
+                ? err.message === "SUPABASE_NOT_CONFIGURED"
+                    ? "Supabase no está configurado. Verifica SUPABASE_URL y SUPABASE_ANON_KEY."
                     : "No pudimos cargar los programas en este momento."
                 : "Error inesperado al cargar los datos.";
     }

@@ -4,7 +4,7 @@
 // Incluye análisis de mercado del país desde el repositorio local del Word del cliente.
 
 import { notFound } from "next/navigation";
-import { fetchProgramas } from "@/lib/services/airtable";
+import { fetchProgramas } from "@/lib/services/supabase";
 import { obtenerAnalisisPorPais } from "@/lib/constants/paisesData";
 import { Header } from "@/components/layout/Header";
 import { TesistaActions } from "@/components/ui/TesistaActions";

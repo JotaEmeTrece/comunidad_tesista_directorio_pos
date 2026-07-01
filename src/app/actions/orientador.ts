@@ -5,7 +5,7 @@
 
 "use server";
 
-import { fetchProgramas } from "@/lib/services/airtable";
+import { fetchProgramas } from "@/lib/services/supabase";
 import type { Programa } from "@/types";
 
 /** Perfil del usuario para el orientador vocacional */
