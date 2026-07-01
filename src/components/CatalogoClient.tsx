@@ -391,6 +391,13 @@ export default function CatalogoClient({ inicialProgramas, serverError }: Catalo
                                 ))}
                             </div>
                         )}
+                        {analisisPais.conclusion && (
+                            <div className="mt-3 pt-3 border-t border-yellow/20">
+                                <p className="text-white/60 text-xs leading-relaxed italic">
+                                    {analisisPais.conclusion}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 )}
 

@@ -55,3 +55,4 @@ cypress/screenshots/
 # ── General ──
 *.md
 *.txt
+*.csv
